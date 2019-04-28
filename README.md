@@ -28,5 +28,8 @@ Scripts are not self-contained units of codes, because they make only sense for 
 
 All commits are made on a single branch (master). Whenever there are significant external changes, such as new updated versions of data sources, or whenever a certain version of several scripts is used to produce a specific output (a presentation, a report, or a summary data set) tags are used to label these specific versions. Because of the strong connection between code and data, it makes sense to also include the raw data or at least some summary information of the raw data in the version control system to make the analysis reproducible. 
 
+A gist describing the feature-branch workflow can be found here:
+https://gist.github.com/jakobgerstenlauer/68584f0f735e91d620166de8a47d0559
+
 ## Quality assessment for scripts
 In contrast to packages, the approach to testing differs: Instead of unit-tests, data scientists should use assertive statements (asserts, checks) to make sure that certain assumptions about the underlying data are valid. In R the validate package provides tools to define rules and apply them to a data set. Other crucial tests include statistical checks concerning goodness of fit, patterns in residuals, cross-validation, and the visualization of model predictions. More general dangers of model misuse related to [extrapolation](https://en.wikipedia.org/wiki/Extrapolation), faulty input data, and confusing correlative with cause-effect relationships should also not be ignored.
